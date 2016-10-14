@@ -3,9 +3,9 @@ class Farm
    private Animal[] animals = new Animal[3];
    public Farm()
    {
-   		animals[0] = new Cow("cow", "moo");
-   		animals[1] = new Chick("chick", "cluck", "cheep");
-   		animals[2] = new Pig("pig", "oink");
+   		animals[0] = new NamedCow("Cow", "Albert", "moo");
+   		animals[1] = new Chick("Chick", "cluck", "cheep");
+   		animals[2] = new Pig("Pig", "oink");
    }
    public void animalSounds()
    {
@@ -13,5 +13,6 @@ class Farm
 	   	{
 	   		System.out.println(animals[nI].getType() + " goes " + animals[nI].getSound());
 	   	}
+         System.out.println("The cow is known as " + ((NamedCow)animals[0]).getName());
    }
 }
